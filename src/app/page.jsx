@@ -1,7 +1,6 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { FaEye } from "react-icons/fa";
+import { useContext, useEffect, useState } from 'react';
+import { FaEye } from 'react-icons/fa';
 
-import { useNavigate } from 'react-router-dom';
 import Carusel from '../components/carousel';
 import '../styles/home.css';
 import '../styles/pagination.css';
@@ -26,7 +25,6 @@ function Home() {
 
 	const [currentPage, setCurrentPage] = useState(1);
 	const itemsPerPage = 10;
-
 
 	useEffect(() => {
 		fetchData();
@@ -205,7 +203,7 @@ function Home() {
 																		isAdded ? 'text-green-400 cursor-pointer' : 'cursor-pointer'
 																	}`}
 																>
-																	<FaEye/>
+																	<FaEye />
 																</span>
 															</div>
 															<div className='w-[50px]'>
