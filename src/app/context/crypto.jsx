@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 // Create a Context for the crypto data
@@ -15,7 +15,7 @@ export const CryptoProvider = ({ children }) => {
 	const [openWatchList, setOpenWatchList] = useState(false);
 	const [singleCrypto, setSingleCrypto] = useState({});
 	const [cryptoData, setCryptoData] = useState([]);
-	const navigate = useNavigate()
+	const navigate = useNavigate();
 
 	const fetchData = async () => {
 		try {
@@ -129,7 +129,7 @@ export const CryptoProvider = ({ children }) => {
 		}
 	};
 
-	const getCryptoById = async (id) => {
+	const getCryptoById = async id => {
 		fetchCryptoData(id);
 		try {
 			const response = await fetch(`https://api.coingecko.com/api/v3/coins/${id}`);
